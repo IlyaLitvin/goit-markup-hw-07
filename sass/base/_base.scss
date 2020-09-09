@@ -40,3 +40,10 @@ img {
   background-color: $box-bg-color;
   margin-bottom: 30px;
 }
+
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
