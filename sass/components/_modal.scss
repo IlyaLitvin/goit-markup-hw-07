@@ -6,17 +6,16 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   transition: all 250ms linear;
-}
 
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: all 250ms linear 250ms;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 250ms linear 250ms;
+  }
 }
 
 .modal {
-  padding: 40px;
   border-radius: 4px;
   position: absolute;
   top: 50%;
@@ -27,11 +26,11 @@
   transition: transform 250ms linear 150ms;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-}
 
-.backdrop.is-hidden .modal {
-  transform: translateX(-50%) scale(0);
-  transition: transform 250ms linear 0s;
+  .backdrop.is-hidden & {
+    transform: translateX(-50%) scale(0);
+    transition: transform 250ms linear 0s;
+  }
 }
 
 .modal-btn {
@@ -56,9 +55,7 @@
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-
   color: $title-text-color;
-
   margin-bottom: 40px;
 }
 
@@ -67,6 +64,10 @@
   flex-direction: column;
   margin: 0 auto;
   padding: 40px;
+
+  & a {
+    color: $accent-color;
+  }
 }
 
 .modal-form-input {
@@ -75,6 +76,11 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
+
+  &:focus,
+  &:hover {
+    border-color: $accent-color;
+  }
 }
 
 .modal-form-input:focus,
@@ -89,6 +95,11 @@
   border-radius: 4px;
   resize: none;
   padding: 12px 16px;
+
+  &:focus,
+  &:hover {
+    border-color: $accent-color;
+  }
 }
 
 .modal-form-contain {
@@ -110,22 +121,22 @@
   padding-top: 20px;
   display: flex;
   align-items: center;
-}
 
-.modal-form-label-check::before {
-  display: block;
-  content: "";
-  width: 16px;
-  height: 16px;
-  margin-right: 6px;
-  background-image: url(../img/Vector.svg), url(../img/iconcheck.svg);
-  background-size: contain, 0;
-  background-repeat: no-repeat;
-}
+  &::before {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    background-image: url(../img/Vector.svg), url(../img/iconcheck.svg);
+    background-size: contain, 0;
+    background-repeat: no-repeat;
 
-.modal-form-check:checked + .modal-form-label-check::before {
-  background-image: url(../img/iconcheck.svg);
-  background-size: 1, contain;
+    .modal-form-check:checked + & {
+      background-image: url(../img/iconcheck.svg);
+      background-size: 1, contain;
+    }
+  }
 }
 
 .modal-form-icon {
@@ -136,24 +147,10 @@
   display: block;
   width: 18px;
   height: 18px;
-}
 
-.modal-form-message:focus,
-.modal-form-message:hover {
-  border-color: $accent-color;
-}
-
-.modal-form-input:focus,
-.modal-form-input:hover {
-  border-color: $accent-color;
-}
-
-.modal-form-input:focus ~ .modal-form-icon {
-  fill: $accent-color;
-}
-
-.modal-form a {
-  color: $accent-color;
+  .modal-form-input:focus ~ & {
+    fill: $accent-color;
+  }
 }
 
 .modal-form-btn {

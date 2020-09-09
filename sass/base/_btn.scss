@@ -14,13 +14,13 @@
   border: 1px solid transparent;
 }
 
-button:hover,
-button:focus {
-  color: $primary-white-color;
-  background-color: $accent-color;
-}
-
 button {
   cursor: pointer;
   transition: all 0.4s ease;
+
+  &:focus,
+  &:hover {
+    color: $primary-white-color;
+    background-color: $accent-color;
+  }
 }

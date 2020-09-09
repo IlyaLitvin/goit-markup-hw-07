@@ -65,10 +65,10 @@
   width: 40px;
   height: 40px;
   transition: all 0.4s ease;
-}
 
-.footer-social-item-link:hover {
-  background-color: $accent-color;
+  &:hover {
+    background-color: $accent-color;
+  }
 }
 
 .footer-social-list-svg {
