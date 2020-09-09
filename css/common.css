@@ -54,7 +54,7 @@ img {
   position: absolute;
   bottom: -1px;
   display: block;
-  content: ' ';
+  content: " ";
   border-radius: 2px;
   width: 100%;
   height: 4px;
