@@ -10,14 +10,12 @@
   align-items: center;
   fill: $primary-text-color;
   transition: all 0.4s ease;
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
 }
 
+.contacts-title:hover,
+.contacts-title:focus,
 .contacts-item-svg:hover {
+  color: $accent-color;
   fill: $accent-color;
 }
 

@@ -91,11 +91,10 @@ img {
   transition: all 0.4s ease;
 }
 
-.contacts-title:hover, .contacts-title:focus {
-  color: #2196f3;
-}
-
+.contacts-title:hover,
+.contacts-title:focus,
 .contacts-item-svg:hover {
+  color: #2196f3;
   fill: #2196f3;
 }
 

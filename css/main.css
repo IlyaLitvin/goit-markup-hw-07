@@ -1,3 +1,23 @@
+.is-hidden {
+  transition: all 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+  margin: 0;
+}
+
 *,
 *::after,
 *::before {
@@ -238,12 +258,12 @@ img {
   margin-right: 50px;
 }
 
-.sitve-nav .current {
+.site-nav .current {
   position: relative;
   color: #2196f3;
 }
 
-.sitve-nav .current::after {
+.site-nav .current::after {
   position: absolute;
   bottom: -1px;
   display: block;
@@ -252,11 +272,6 @@ img {
   width: 100%;
   height: 4px;
   background: #2196f3;
-}
-
-.section-list {
-  width: calc(100% / 4);
-  padding: 15px;
 }
 
 .site-nav .link {
@@ -276,24 +291,9 @@ img {
   color: #2196f3;
 }
 
-.is-hidden {
-  transition: all 0.2s ease;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
-
-.visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
-  margin: 0;
+.section-list {
+  width: calc(100% / 4);
+  padding: 15px;
 }
 
 .hero {
